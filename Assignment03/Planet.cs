@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment03
 {
-    class Planet
+    abstract class Planet
     {
         // INSTANCE VARIABLES ******************************************
         private double _diameter, _mass;
