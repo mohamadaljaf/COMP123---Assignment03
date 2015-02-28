@@ -1,4 +1,12 @@
-﻿using System;
+﻿///------------------------------------------------------------------------------------------
+///   Author:               Mohamad Al-Jaf   
+///   
+///   Date last modified:   February 27, 2015
+///   
+///   Class description:    An abstract class used as the foundation for subclasses of this
+///                         class.
+///------------------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Assignment03
 {
+    // Planet abstract class - blueprint for planet subclasses
     abstract class Planet
     {
         // INSTANCE VARIABLES ******************************************
@@ -27,14 +36,14 @@ namespace Assignment03
         public Planet(string name, double diameter, double mass)
         {
             this._name = name;
-            this._diameter = diameter;
-            this._mass = mass;
+            this._diameter = diameter; // in km
+            this._mass = mass; // relative to Earth's mass
         }
 
         // OVERRIDDEN METHODS ******************************************
         public override string ToString()
         {
-            return String.Format("Name: {0}\nDiameter: {1}\nMass: {2}\n", this._name, this._diameter, this._mass);
+            return String.Format("Name: {0}\nDiameter (km): {1}\nMass (Earth mass): {2}\n", this._name, this._diameter, this._mass);
         }
     }
 }
